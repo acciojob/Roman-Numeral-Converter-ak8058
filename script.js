@@ -10,7 +10,16 @@ function convertToRoman(num) {
     };
 
   //your code here
-
+	let romanNeural="";
+	for(let [symbol,value] of obj)
+		{
+			while(num>=value)
+				{
+					romanNeural=romanNeural+symbol;
+					num=num-value;
+				}
+		}
+	return romanNeural;
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
